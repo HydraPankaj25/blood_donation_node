@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Blood Donation</title>
+	<link rel="stylesheet" href="font-awesome.min.css">
+	<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+	<!--header part start here-->
+	<header class="header">
+		<div class="mid">
+			<div class="logo">
+				<a href="#"><img src="images.png" alt=""></a>
+			</div>
+			<nav class="menu">
+				<ul>
+					<li><a class="active" href="/">HOME</a></li>
+					<li><a href="/member">GROUP MEMBER</a></li>
+					<li><a href="/orgnization">AFFILIATE ORGANIZATION</a></li>
+					<% if (cookie==null) { %>
+						<li><a href="/login">LOGIN</a></li>
+						<li><a href="/register">REGISTERATION</a></li>
+						<% } else { %>
+							<li><a href="/dashboard">DASHBOARD</a></li>
+							<% } %>
+								<li><a href="/about">ABOUT</a></li>
+				</ul>
+			</nav>
+			<div class="icon">
+				<a href="#"><i class="fa fa-bars"></i></a>
+			</div>
+		</div>
+	</header>
+	<!--header part end here-->
+
+	<!--banner part start here-->
+	<div class="banner">
+		<div class="mid">
+			<h1>DONATE THE BLOOD....</h1>
+			<p id="text"></p>
+			<div class="form">
+				<form action="">
+				</form>
+			</div>
+			<div class="link">
+				<a href="/register">REGISTER TO JOIN US</a>
+			</div>
+		</div>
+	</div>
+	<!--banner part end here-->
+	<!--card part start here-->
+	<div class="card">
+		<div class="mid">
+			<div class="doner">
+				<h1>THE LATEST BLOOD DONOR</h1>
+				<img src="I1.jpg" alt="">
+				<h2>
+					<%= data[0].Name%>
+				</h2>
+				<span>BLOOD GROUP: <%=data[0].Bloodgrrp%></span>
+			</div>
+			<div class="doner">
+				<h1>THE LATEST BLOOD DONOR</h1>
+				<img src="I7.jpg" alt="">
+				<h2>
+					<%= data[1].Name%>
+				</h2>
+				<span>BLOOD GROUP: <%=data[1].Bloodgrrp%></span>
+			</div>
+			<div class="doner">
+				<h1>THE LATEST BLOOD DONOR</h1>
+				<img src="I3.jpg" alt="">
+				<h2>
+					<%= data[2].Name%>
+				</h2>
+				<span>BLOOD GROUP: <%=data[2].Bloodgrrp%></span>
+			</div>
+		</div>
+	</div>
+	<!--card part end here-->
+	<!--table part start here-->
+	<div class="table">
+		<div class="mid">
+			<h1>LIST OF LATEST BLOOD DONOR</h1>
+			<h3>BLOOD GROUP: O+</h3>
+			<table border>
+				<thead>
+					<tr>
+						<th>S.NO.</th>
+						<th>NAME</th>
+						<th>DATE OF BIRTH</th>
+					</tr>
+				</thead>
+				<%var count=0; %>
+					<% for(var i=0; i<len; i++) { %>
+						<% if(data[i].Bloodgrrp=="O+" ){%>
+							<% count=count+1; %>
+								<tbody>
+									<tr>
+										<td>
+											<%=count%>
+										</td>
+										<td>
+											<%=data[i].Name%>
+										</td>
+										<td>
+											<%=data[i].dobDay%>/<%=data[i].dobMonth%>/<%=data[i].dobYear%>
+										</td>
+									</tr>
+								</tbody>
+								<% } %>
+									<% } %>
+			</table>
+			<h3>BLOOD GROUP: AB+</h3>
+			<table border>
+				<thead>
+					<tr>
+						<th>S.NO.</th>
+						<th>NAME</th>
+						<th>DATE OF BIRTH</th>
+					</tr>
+				</thead>
+				<%var count=0; %>
+					<% for(var i=0; i<len; i++) { %>
+						<% if(data[i].Bloodgrrp=="AB+" ){%>
+							<% count=count+1; %>
+								<tbody>
+									<tr>
+										<td>
+											<%=count%>
+										</td>
+										<td>
+											<%=data[i].Name%>
+										</td>
+										<td>
+											<%=data[i].dobDay%>/<%=data[i].dobMonth%>/<%=data[i].dobYear%>
+										</td>
+									</tr>
+								</tbody>
+								<% } %>
+									<% } %>
+			</table>
+			<h3>BLOOD GROUP: B+</h3>
+			<table border>
+				<thead>
+					<tr>
+						<th>S.NO.</th>
+						<th>NAME</th>
+						<th>DATE OF BIRTH</th>
+					</tr>
+				</thead>
+				<%var count=0; %>
+					<% for(var i=0; i<len; i++) { %>
+						<% if(data[i].Bloodgrrp=="B+" ){%>
+							<% count=count+1; %>
+								<tbody>
+									<tr>
+										<td>
+											<%=count%>
+										</td>
+										<td>
+											<%=data[i].Name%>
+										</td>
+										<td>
+											<%=data[i].dobDay%>/<%=data[i].dobMonth%>/<%=data[i].dobYear%>
+										</td>
+									</tr>
+								</tbody>
+								<% } %>
+									<% } %>
+			</table>
+			<h3>BLOOD GROUP: A+</h3>
+			<table border>
+				<thead>
+					<tr>
+						<th>S.NO.</th>
+						<th>NAME</th>
+						<th>DATE OF BIRTH</th>
+					</tr>
+				</thead>
+				<%var count=0; %>
+					<% for(var i=0; i<len; i++) { %>
+						<% if(data[i].Bloodgrrp=="A+" ){%>
+							<% count=count+1; %>
+								<tbody>
+									<tr>
+										<td>
+											<%=count%>
+										</td>
+										<td>
+											<%=data[i].Name%>
+										</td>
+										<td>
+											<%=data[i].dobDay%>/<%=data[i].dobMonth%>/<%=data[i].dobYear%>
+										</td>
+									</tr>
+								</tbody>
+								<% } %>
+									<% } %>
+			</table>
+		</div>
+	</div>
+	<!--table part end here-->
+	<!--footer part start here-->
+	<footer>
+		<div class="mid">
+			<p><span>NOTICE: </span> Any blood availibilty query or any need contact 017176626487</p>
+			<a href="#"> Click for blood in case of emergency and contact us on above number</a>
+		</div>
+	</footer>
+	<!--footer part end here-->
+	<!--footer2 part start here-->
+	<div class="footer">
+		<div class="mid">
+			<p>&copy 2022-2023 ।।All Right Reserved Design By PANKAJ MISHRA AND SAHIBA PARVEEN</p>
+		</div>
+	</div>
+	<!--footer2 part end here-->
+
+
+	<script type="text/javascript" src="jquery-3.4.1.min.js"></script>
+	<script type="text/javascript" src="index.js"></script>
+</body>
+
+</html>

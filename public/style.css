@@ -1,0 +1,763 @@
+*{
+	padding: 0;
+	margin: 0;
+	font-family: candara;
+}
+body{
+	background-image: linear-gradient(rgba(0, 0, 0, .2),rgba(0, 0, 0, .2)),url('./b1.jpg');
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
+}
+a{
+	text-decoration: none;
+}
+ul{
+	list-style: none;
+}
+.mid{
+	width: 80%;
+	margin: auto;
+}
+.header{
+	background-color: #f6f6f6;
+	border-bottom: 1px solid #e9e9e9;
+}
+.header:after{
+	content: '';
+	display: block;
+	clear: both;
+}
+.header .logo{
+	float: left;
+	width: 20%;
+}
+.header .logo img{
+	width: 80%;
+	display: block;
+	margin: auto;
+	height: 70px;
+}
+.header .menu{
+	width: 60%;
+	float: left;
+	margin-top: 20px;
+}
+.header .menu li{
+	display: inline-block;
+}
+.header .menu li a{
+	color: red;
+	font-size: 12px;
+	font-weight: 500;
+	padding: 6px 14px;
+	border-radius: 4px;
+	border: none;
+}
+.header .menu li a:hover{
+	background-color: red;
+	color: #fff;
+}
+.header .menu li .active{
+	background-color: red;
+	color: #fff;
+}
+.header .icon{
+	width: 20%;
+	float: left;
+	margin-top: 20px;
+	display: none;
+}
+.header .icon i{
+	color: #444;
+	float: right;
+	font-size: 20px;
+}
+/*banner part start here*/
+.banner{
+	background-image: linear-gradient(rgba(0, 0, 0, .4),rgba(0, 0, 0, .4)),url('./b4.jpeg');
+	background-size: cover;
+	background-position: center;
+	overflow: hidden;
+	padding-bottom: 50px;
+
+}
+.banner h1{
+	color: #fff;
+	text-align: center;
+	margin-top: 80px;
+	font-size: 40px;
+	height: 50px;
+	padding: 10px;
+}
+.banner p{
+	text-align: center;
+	margin-top: 10px;
+	color: #fff;
+	font-size: 30px;
+	height: 50px;
+}
+.banner select{
+	width: 280px;
+	padding: 6px;
+	margin-left: 20px;
+	border-radius: 5px;
+	border: none;
+	margin-top: 40px;
+}
+.banner select:focus{
+	outline: none;
+}
+.banner input{
+	width: 200px;
+	padding: 8px;
+	border: none;
+	border-radius: 5px;
+	margin-top: 40px;
+	margin-left: 20px;
+	font-size: 15px;
+}
+.banner input:focus{
+	outline: none;
+}
+.banner input[type="submit"]{
+	background-color: red;
+	color: #fff;
+	width: 63px;
+	border-radius: 3px;
+	margin-left: -60px;
+	cursor: pointer;
+}
+.banner .form{
+	width: 80%;
+	margin: auto;
+}
+.menu1{
+	width: 100%;
+	margin: auto;
+	background-color: #f6f6f6;
+	padding: 10px 0;
+	display: none;
+}
+.menu1 ul li:nth-child(5){
+	border-bottom: none;
+}
+.menu1 ul li a:hover{
+	color: #444;
+}
+.menu1 ul li{
+	margin-top: 10px;
+	border-bottom: 1px solid #e9e9e9;
+}
+.menu1 ul li a{
+	text-align: center;
+	display: block;
+	padding: 10px 15px;
+	color: red;
+	font-size: 15px;
+}
+.banner .link a{
+	background-color: red;
+	padding: 13px;
+	border: none;
+	display: block;
+	text-align: center;
+	width: 30%;
+	margin: 60px auto;
+	color: #fff;
+	border-radius: 50px;
+	box-shadow: 0px 3px 5px rgba(0, 0, 0, .2);
+}
+/*banner part end here*/
+/*donner part start here*/
+.card{
+	padding-bottom: 50px;
+}
+.card:after{
+	content: '';
+	display: block;
+	clear: both;
+}
+.card .doner{
+	width: 28%;
+	max-width: 100%;
+	float: left;
+	padding: 20px;
+	background-color: #000;
+	box-shadow: 0 2px 8px rgba(0, 0, 0, .9);
+	margin-top: -50px;
+	border-radius: 5px;
+	border: none;
+	margin-left: 10px;
+	transition: .5s;
+	transition: .5s;
+}
+.card .doner:hover{
+	background-color: red;
+}
+.card .doner h1{
+	background-color: red;
+	padding: 10px;
+	color: #fff;
+	text-align: center;
+	font-size: 25px;
+}
+.card .doner img{
+	width: 100%;
+	margin-top: 10px;
+}
+.card .doner h2{
+	color: #fff;
+
+}
+.card .doner span{
+	display: block;
+	color: #fff;
+	margin-top: 5px;
+	font-weight: 600;
+	font-size: 12px;
+}
+.table{
+	padding-bottom: 60px;
+	width: 100%;
+	margin: auto;
+}
+.table h1{
+	color: red;
+	text-align: center;
+	margin-top: 40px;
+}
+.table h3{
+	color: red;
+	text-align: center;
+	margin-top: 20px;
+}
+.table table{
+	width: 100%;
+	border: 2px solid red;
+	margin-top: 20px;
+}
+.table table th{
+	padding: 10px;
+	background-color: red;
+	color: #fff;
+	font-size: 20px;
+}
+.table table, tr, td{
+	border-collapse: collapse;
+	padding: 10px;
+	background-color: #f9f9f9;
+	font-size: 15px;
+	color: #444;
+	text-align: center;
+}
+.table table, tr,td:hover{
+	background-color: #e9e9e9;
+}
+/*donner part end here*/
+/* organiged gift part start here*/
+.org{
+	padding-bottom: 50px;
+}
+.org:after{
+	content: '';
+	display: block;
+	clear: both;
+}
+.org h2{
+	background-color: red;
+	padding: 10px 50px;
+	color: #fff;
+	text-align: center;
+}
+.org .org1{
+	width: 20%;
+	float: left;
+	background-color: #e9e9e9;
+	padding: 10px 20px;
+	border-radius: 4px;
+	border: 1px solid #e9e9e9;
+	box-shadow: 1px 3px 6px #999;
+	margin-top: 30px;
+	margin-left: 10px;
+}
+.org .org1 h3{
+	font-size: 25px;
+	color: #444;
+	text-align: center;
+}
+.org .org1 p{
+	font-size: 22px;
+	color: #444;
+	text-align: center;
+	line-height: 20px;
+}
+.org .org1 span{
+	font-size: 18px;
+	color: red;
+	text-align: center;
+	line-height: 20px;
+	display: block;
+	font-weight: bold;
+}
+/* organiged gift part end here*/
+/*footer part start here*/
+footer{
+	background-color: #f6f6f6;
+	padding-bottom: 40px;
+	overflow: hidden;
+}
+footer p{
+	margin-top: 40px;
+	text-align: center;
+	color: #444;
+	font-family: tahoma;
+}
+footer span{
+	color: red;
+}
+footer a{
+	background-color: red;
+	padding: 10px;
+	text-align: center;
+	color: #fff;
+	width: 50%;
+	margin: 40px auto;
+	display: block;
+	border-radius: 3px;
+}
+.footer{
+	background-color: #444;
+	padding: 20px;
+}
+.footer p{
+	color: #fff;
+	text-align: center;
+	font-family: tahoma;
+}
+/*footer part end here*/
+/* login gift part start here*/
+.login{
+	padding: 20px;
+	margin-top: 40px;
+}
+.login h2{
+	background-color: red;
+	color: #fff;
+	text-align: center;
+	padding: 20px;
+}
+.login form{
+	border: 1px solid red;
+	padding: 50px;
+	margin-top: -14px;
+	background-color: #444;
+}
+.login form label{
+	display: block;
+	color: #fff;
+	width: 70%;
+	margin: auto;
+	margin-top: 20px;
+	margin-bottom: 10px;
+}
+.login form input{
+	width: 70%;
+	padding: 5px;
+	border: 1px solid red;
+	border-radius: 4px;
+	margin: auto;
+	display: block;
+}
+.login form input[type="submit"]{
+	width: 50%;
+	margin: 20px auto;
+	padding: 10px 30px;
+	background-color: red;
+	color: #fff;
+}
+.login form input:focus{
+	outline: none;
+}
+.login form a{
+	color: red;
+	display: block;
+	text-align: center;
+}
+/* login gift part end here*/
+/* registration part start here*/
+.reg{
+	margin-top: 30px;
+	padding-bottom: 50px;
+}
+.reg h3{
+	background-color: red;
+	padding: 30px;
+	text-align: center;
+	color: #fff;
+}
+.reg form{
+	border: 1px solid red;
+	padding: 50px;
+	margin-top: -14px;
+	background-color: #444;
+}
+.reg form label{
+	display: block;
+	width: 80%;
+	margin: 10px auto;
+	color: #fff;
+}
+.reg form input{
+	width: 80%;
+	margin: auto;
+	display: block;
+	padding: 5px;
+	border: 1px solid red;
+	border-radius: 4px;
+	margin-top: 10px;
+}
+.reg form input:focus{
+	outline: none;
+}
+.reg form fieldset select:focus{
+	outline: none;
+}
+.reg form fieldset select{
+	width: 80%;
+	display: block;
+	padding: 5px;
+	border: 1px solid red;
+	margin: auto;
+	border-radius: 4px;
+}
+.reg form fieldset label{
+	margin: 10px auto;
+}
+.reg form fieldset{
+	border: 1px dashed red;
+	padding: 20px;
+	width: 80%;
+	margin: 10px auto;
+}
+.reg form fieldset legend{
+	width: 110px;
+	font-size: 17px;
+	color: #fff;
+}
+.reg form .blood-group select{
+	width: 80%;
+	margin: auto;
+	display: block;
+	padding: 5px;
+	border: 1px solid red;
+	border-radius: 4px;
+}
+.reg form .blood-group select:focus{
+	outline: none;
+}
+.reg form .date{
+	width: 80%;
+	margin: auto;
+}
+.reg form .date select{
+	padding: 5px;
+	background-color: transparent;
+	color: #fff;
+	border: none;
+	background-color: #000;
+}
+.reg form .date select:focus{
+	outline: none;
+}
+.reg form .gender{
+	width: 80%;
+	margin: 20px auto;
+	padding: 5px;
+}
+.reg form .gender input{
+	margin: 0;
+	width: 50px;
+	display: inline-block;
+}
+.reg form .gender label{
+	margin: 0;
+	width: 50px;
+	display: inline-block;
+}
+.reg form p{
+	color: red;
+	text-align: left;
+	margin-top: 7px;
+}
+.reg form input[type="submit"]{
+	width: 50%;
+	margin: 20px auto;
+	background-color: red;
+	color: #fff;
+}
+.reg form a{
+	color: red;
+	display: block;
+	text-align: center;
+}
+.reg form span{
+	display: block;
+	width: 80%;
+	margin: 20px auto;
+	color: #fff;
+}
+/* registration part end here*/
+/* membar part start here*/
+.member{
+	padding-bottom: 50px;
+}
+.member:after{
+	content: '';
+	display: block;
+	clear: both;
+}
+.member h1{
+	color: #fff;
+	background-color: red;
+	padding: 20px;
+	text-align: center;
+}
+.member .president .pres{
+	width: 35%;
+	float: left;
+	margin-top: 50px;
+	background-color: #f6f6f6;
+	margin-left: 100px;
+	border-radius: 5px;
+	box-shadow: 0px 2px 6px rgba(0, 0, 0, .4);
+}
+.member .president .pres img{
+	width: 100%;
+	border-radius: 5px 5px 0 0;
+	height: 250px;
+}
+.member .president .pres h4{
+	color: #444;
+	margin-top: 10px;
+	font-size: 25px;
+	margin-left: 20px;
+}
+.member .president .pres p{
+	color: red;
+	font-size: 20px;
+	font-weight: 500;
+	font-family: tahoma;
+	margin-left: 20px;
+}
+.member .president .pres span{
+	margin-top: 10px;
+	color: #444;
+	display: block;
+	margin-top: 5px;
+	font-size: 17px;
+	font-family: tahoma;
+	margin-left: 20px;
+}
+.member .president .pres .links{
+	width: 100%;
+	padding: 10px 0;
+	margin-top: 10px;
+	margin-left: 20px;
+}
+.member .president .pres .links i{
+	color: #fff;
+	font-size: 18px;
+	text-align: center;
+	background-color: red;
+	padding: 6px 14px;
+	border-radius: 4px;
+}
+.member .president .member1 .mem1{
+	width: 20%;
+	float: left;
+	background-color: #f6f6f6;
+	margin-top: 40px;
+	box-shadow: 0px 2px 6px rgba(0, 0, 0, .3);
+	border-radius: 5px;
+	margin-left: 30px;
+}
+.member .president .member1 .mem1 img{
+	width: 100%;
+	display: block;
+	margin: auto;
+	border-radius: 5px 5px 0 0;
+	height: 150px;
+}
+.member .president .membar1 .mem1 h4{
+	color: #444;
+	font-family: tahoma;
+	margin-top: 10px;
+	font-size: 16px;
+	margin-left: 10px;
+	padding: 0 10px ;
+}
+.membar .president .member1 .mem1 p{
+	font-family: tahoma;
+	font-size: 12px;
+	color: red;
+	margin-top: 8px;
+	margin-left: 10px;
+	padding: 0 10px ;
+	font-weight: 500;
+}
+.member .president .member1 .mem1 span{
+	color: #444;
+	font-family: tahoma;
+	margin-top: 5px;
+	display: block;
+	margin-left: 10px;
+	padding: 0 10px ;
+	font-size: 12px;
+}
+.member .president .member1 .mem1 .links{
+	width: 100%;
+	margin-top: 10px;
+	margin-left: 10px;
+	padding: 10px;
+}
+.member .president .member1  .mem1 .links i{
+	color: #fff;
+	font-size: 14px;
+	text-align: center;
+	background-color: red;
+	padding: 5px 12px;
+	border-radius: 4px;
+}
+
+/* membar part end here*/
+/* responsive part start here*/
+
+@media (max-width: 576px){
+	.header .menu{
+		display: none;
+	}
+	.header .icon{
+		display: block;
+		float: right;
+	}
+	.header .logo img{
+		width: 200px;
+	}
+	.banner p{
+		font-size: 20px;
+	}
+	.banner h1{
+		font-size: 30px;
+	}
+	.banner input{
+		width: 275px;
+	}
+	.banner .link a{
+		width: 80%;
+	}
+	.card .doner{
+		width: 90%;
+		margin: 30px auto;
+	}
+	.table{
+		width: 100%;
+	}
+	.table table th{
+		font-size: 14px;
+	}
+	.table table, tr, td{
+		font-size: 13px;
+		padding: 5px;
+	}
+	.banner .menu1{
+		width: 100%;
+	}
+	footer a{
+		width: 80%;
+	}
+	.footer p{
+		font-size: 13px;
+	}
+	.org .org1{
+		width: 36%;
+		margin: 20px auto;
+		margin-left: 10px;
+	}
+	.org .org1 h3{
+		font-size: 17px;
+	}
+	.org .org1 p{
+		font-size: 15px;
+	}
+	.org .org1 span{
+		font-size: 15px;
+	}
+	.member .president .pres{
+		width: 40%;
+		margin: auto;
+		margin-left: 27px;
+		margin-top: 30px;
+	}
+	.member .president .pres img{
+		width: 100%;
+		height: 100px;
+	}
+	.member .president .pres h4{
+		font-size: 12px;
+	}
+	.member .president .pres p{
+		font-size: 10px;
+	}
+	.member .president .pres span{
+		font-size: 10px;
+	}
+	.member .president .pres .links i{
+		font-size: 12px;
+		padding: 4px 7px;
+	}
+	.member .president .member1 .mem1{
+		width: 30%;
+		margin-left: 10px;
+	}
+	.member .president .member1 .mem1 img{
+		width: 100%;
+		height: 80px;
+	}
+	.member .president .member1 .mem1 h4{
+		font-size: 10px;
+	}
+	.member .president .member1 .mem1 p{
+		font-size: 10px;
+		margin-top: 0px;
+	}
+	.member .president .member1 .mem1 span{
+		font-size: 10px;
+		margin-top: 2px;
+	}
+	.member .president .member1 .mem1 .links{
+		margin-top: -10px;
+	}
+	.member .president .member1 .mem1 .links i{
+		font-size: 9px;
+		padding: 3px 5px;
+	}
+	.member .president .member1 .mem1{
+		height: 210px;
+	}
+}
+
+
+/* warnig for checking password */
+#warning{
+	font-size: 15px;
+	font-weight: bold;
+	color: red;
+	display: none;
+}
+
+#rememberpass{
+	font-size: 15px;
+	font-weight: bold;
+	color: rgb(255, 232, 232);
+}

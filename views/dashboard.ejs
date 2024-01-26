@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Dashboard Of User</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.bundle.min.js"></script>
+  <link rel="stylesheet" href="dashboard.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <!--header part start here-->
+  <header class="header" style="top:0px">
+    <div class="mid">
+      <div class="logo">
+        <a href="#"><img src="images.png" alt=""></a>
+      </div>
+      <nav class="menu">
+        <ul>
+          <li><a href="/">HOME</a></li>
+          <li><a href="/member">GROUP MEMBER</a></li>
+          <li><a href="/orgnization">AFFILIATE ORGANIZATION</a></li>
+          <li><a href="/about">ABOUT</a></li>
+          <li><a class="active" href="/dashboard">DASHBOARD</a></li>
+        </ul>
+      </nav>
+      <div class="icon">
+        <a href="#"><i class="fa fa-bars"></i></a>
+      </div>
+    </div>
+  </header>
+  <!--header part end here-->
+
+  <section class="section about-section gray-bg" id="about">
+    <!-- button for logout -->
+    <a href="/logout" class="btn btn-info btn-lg">
+      <span class="glyphicon glyphicon-log-out">Log out</span>
+    </a>
+
+    <div class="container">
+      <div class="row align-items-center flex-row-reverse">
+        <div class="col-lg-6">
+          <div class="about-text go-to">
+            <h3 class="dark-color">
+              <%= data[0].Name %>
+            </h3>
+            <h6 class="theme-color lead">YOU ARE NOW A LIFE SAVER</h6>
+            <p> <span>I am very supportive person and i am very grateful that i am fit thats why i donate
+                myblood and be saviour for someones life</span>
+            <div class="row about-list">
+              <div class="col-md-6">
+                <div class="media">
+                  <label>Name</label>
+                  <input type="text" name="dashName" value='<%=data[0].Name%>' id="dashinp" disabled>
+                </div>
+                <div class="media">
+                  <label>Gender</label>
+                  <p>
+                    <%= data[0].gender %>
+                  </p>
+                </div>
+                <div class="media">
+                  <label>Blood group</label>
+                  <p>
+                    <%= data[0].Bloodgrrp %>
+                  </p>
+                </div>
+                <div class="media">
+                  <label>Address</label>
+                  <p>
+                    <%= data[0].Address %>
+                  </p>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="media">
+                  <label>G-mail</label>
+                  <p>
+                    <%= data[0].Email %>
+                  </p>
+                </div>
+                <div class="media">
+                  <label>Phone</label>
+                  <p>
+                    <%= data[0].Mobnumber %>
+                  </p>
+                </div>
+                <div class="media">
+                  <label>DOB</label>
+                  <p>
+                    <%= data[0].dobDay %> /&nbsp; <%= data[0].dobMonth %> /&nbsp;
+                    <%=data[0].dobYear %>
+                  </p>
+                </div>
+
+                <div class="media">
+                  <label>Date(blood donation)</label>
+                  <p>
+                    <%= data[0].BLDdate %> /&nbsp; <%= data[0].BLDmonth %> /&nbsp;
+                    <%= data[0].BLDyear %>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="about-avatar">
+            <img src="https://bootdey.com/img/Content/avatar/avatar7.png" title="" alt="">
+          </div>
+        </div>
+      </div>
+      <div class="counter">
+        <div class="row">
+          <div class="col-6 col-lg-3">
+            <div class="count-data text-center">
+              <p class="count">
+                <% var dturn=data[0].BLDturn%>
+                <%= data[0].BLDturn %> Time
+              </p>
+              <p class="m-0px font-w-600">how much time donate the blood</p>
+            </div>
+          </div>
+          <div class="col-6 col-lg-3">
+            <div class="count-data text-center">
+              <p class="count">
+                <%= data[0].BLDpoint %> Point
+              </p>
+              <p class="m-0px font-w-600">how much blood donate</p>
+            </div>
+          </div>
+          <div class="col-6 col-lg-3">
+            <div class="count-data text-center">
+              <p class="count">
+                <%= data[0].BLDtimehr %>:<%= data[0].BLDtimemin %>
+              </p>
+              <p class="m-0px font-w-600">blood donation time</p>
+            </div>
+          </div>
+          <div class="col-6 col-lg-3">
+            <div class="count-data text-center">
+              <p class="count">
+                <!-- getting donation date -->
+                <%var d=new Date(`${data[0].BLDmonth} ${data[0].BLDdate},${data[0].BLDyear}`);%>
+                <%d.setMonth(d.getMonth() + 3);%>
+                <%let nextdt=d.toLocaleDateString();%>
+                <%= nextdt%>
+              </p>
+              <p class="m-0px font-w-600">next date of donation</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <% var today=new Date();%>
+      <!-- <% let currentDate=today.toLocaleDateString("en-US");%>
+                    <% console.log(currentDate) %> -->
+
+      <br>
+      <%if (d !="Invalid Date" && d>= today) { %>
+      <center><span style="color: red; " id="donatespan">YOU CANNOT
+          DONATE
+          YOUR
+          BLOOD
+          BEFORE 3 MONTHS</span></center>
+      <% } %>
+
+
+      <%if (data[0].BLDdate===null || d <=today) { %>
+      <center>
+        <h3>YOU CAN DONATE BLOOD</h3>
+      </center>
+      <% } %>
+
+      <!-- BUTTON TO GO TO BACK TO HOME PAGE  -->
+      <br>
+      <center><a class="btn btn-primary" href="/">BACK TO
+          HOME</a>
+      </center>
+
+      <!-- BUTTON TO AVAIL BLOOD  -->
+      <br>
+      <center><a class="btn btn-success" href="/dashboard/receiver">Avail Blood</a>
+      </center>
+    </div>
+    </div>
+  </section>
+
+
+
+  <!-- importing <script></script> -->
+  <script src="index.js"></script>
+</body>

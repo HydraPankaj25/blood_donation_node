@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>About Page</title>
+	<link rel="stylesheet" href="font-awesome.min.css">
+	<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+	<!--header part start here-->
+	<header class="header">
+		<div class="mid">
+			<div class="logo">
+				<a href="#"><img src="images.png" alt=""></a>
+			</div>
+			<nav class="menu">
+				<ul>
+					<li><a href="/">HOME</a></li>
+					<li><a href="/member">GROUP MEMBER</a></li>
+					<li><a href="/orgnization">AFFILIATE ORGANIZATION</a></li>
+					<% if (cookie==null) { %>
+						<li><a href="/login">LOGIN</a></li>
+						<li><a href="/register">REGISTERATION</a></li>
+						<% } else { %>
+							<li><a href="/dashboard">DASHBOARD</a></li>
+							<% } %>
+								<li><a href="/about" class="active">ABOUT</a></li>
+				</ul>
+			</nav>
+			<div class="icon">
+				<a href="#"><i class="fa fa-bars"></i></a>
+			</div>
+		</div>
+	</header>
+	<!--header part end here-->
+
+	<!--banner part start here-->
+	<div class="banner">
+		<div class="mid">
+			<h1>DONATE THE BLOOD....</h1>
+			<p id="text"></p>
+			<div class="form">
+				<form action="">
+				</form>
+			</div>
+			<div class="link">
+				<a href="/register">REGISTER TO JOIN US</a>
+			</div>
+		</div>
+	</div>
+	<!--banner part end here-->
+	<!--card part start here-->
+
+	<div class="card">
+		<div class="mid">
+			<div class="doner">
+				<h1>OUR MISSION</h1>
+				<img src="S4.jpg" alt="">
+
+				<h3>To make the best use of contemporary technologies in delivering a promising web portal to bring
+					together all the blood donors in India; thereby fulfilling every blood request in the country.
+					To provide a common platform for those who have a zeal to support education of the under resourced
+					yet meritorious students. </h3>
+
+
+			</div>
+			<div class="doner">
+				<h1>OUR VISSION</h1>
+				<img src="s3.jpg" alt="">
+
+				<h3>To pave way for a safer and better tommorrow.
+
+					Safer, by bringing blood donors and those in need to a common platform.
+					Better, by providing every person what he/she deserves the most, best education.
+					Our aim in next 5 years,To be the real hope of every Indian in search of a voluntary blood donor.
+				</h3>
+
+
+			</div>
+			<div class="doner">
+				<h1>OUR GOAL</h1>
+				<img src="s2.jpg" alt="">
+
+				<h3>
+					To wipe off the scarcity of blood and ensure availability of safe and quality blood and other blood
+					components, round the clock and throughout the year. This will lead to alleviation of human
+					sufferings, even to the far-flung remote areas in the country.
+					Values :
+					team work,
+					Compassion,
+					Trust,
+					Oblige,
+					Network
+				</h3>
+			</div>
+		</div>
+	</div>
+
+
+
+
+	<!--footer part start here-->
+	<footer>
+		<div class="mid">
+			<p><span>NOTICE: </span> Any blood availibilty query or any need contact 017176626487</p>
+			<a href="#"> Click for blood in case of emergency and contact us on above number</a>
+		</div>
+	</footer>
+	<!--footer part end here-->
+	<!--footer2 part start here-->
+	<div class="footer">
+		<div class="mid">
+			<p>&copy 2022-2023 ।।All Right Reserved Design By PANKAJ MISHRA AND SAHIBA PARVEEN</p>
+		</div>
+	</div>
+	<!--footer2 part end here-->
+
+
+	<script type="text/javascript" src="jquery-3.4.1.min.js"></script>
+	<script type="text/javascript" src="index.js"></script>
+</body>
+
+</html>
